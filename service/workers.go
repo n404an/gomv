@@ -40,7 +40,7 @@ func (w *worker) run(ctx context.Context, wg *sync.WaitGroup, pool *workers) {
 	w.stats <- wStats{workerId: w.id, status: "launched"}
 	rand.Seed(time.Now().UnixNano())
 	dst := w.p.Dst
-	cnt := len(dst) - 1
+	cnt := len(dst)
 	for {
 		select {
 		case job := <-w.jobs:

@@ -16,3 +16,4 @@
 *.log
 test/
 gomv
+main
